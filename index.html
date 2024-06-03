@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website BookMark</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="fontawesome-free-6.5.2-web/css/all.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header
+      class="vh-100 d-flex justify-content-center align-items-center text-center p-5 shadow"
+    >
+      <div class="container">
+        <h1 class="mt-5">BookMarker <i class="fa-regular fa-bookmark"></i></h1>
+        <span class="h3">Book Your Favourite Websites</span>
+      </div>
+    </header>
+    <section class="p-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Add your bookmark</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">
+                  fill the inputs
+                </h6>
+                <label for="name">Website Name</label>
+                <input
+                  type="text"
+                  id="websiteName"
+                  name="name"
+                  class="w-100 rounded-3 p-2 border-1 mb-2 form-control"
+                  placeholder="Website Name"
+                  oninput="validateForm(this)"
+                />
+                <div class="alert alert-danger p-2 d-none">
+                    <small>Must start with UpperCase letter followed by at least 3 lowercase letters</small>
+                </div>
+                <label for="url">Website Url</label>
+                <input
+                  type="text"
+                  id="websiteUrl"
+                  name="url"
+                  class="w-100 rounded-3 p-2 border-1 mb-2 form-control"
+                  placeholder="Website Url"
+                  oninput="validateForm(this)"
+                />
+                <div class="alert alert-danger p-2 d-none">
+                    <small>Must start with "www." followed by at least 3 letters.</small>
+                </div>
+                <button onclick="addWeb()" class="btn btn-success mt-3" id="addBtn">
+                  Add Bookmark
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="items" id="displayWebs">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

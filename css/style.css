@@ -1,0 +1,30 @@
+:root {
+  --main-color-rgb: 234, 229, 213;
+  --text-color: #faf9f6;
+}
+
+body {
+  color: black;
+}
+
+header {
+  background-image: linear-gradient(
+      rgba(var(--main-color-rgb), 0.6),
+      rgba(var(--main-color-rgb), 0.6)
+    ),
+    url(../imgs/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  h1 {
+    font-weight: 800;
+    font-size: 4rem;
+    font-family: "Homemade Apple", cursive;
+  }
+}
+
+section {
+  background-color: rgba(var(--main-color-rgb), 0.6);
+  .card {
+    background-color: rgba(var(--main-color-rgb));
+  }
+}
